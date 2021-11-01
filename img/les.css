@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: calc(14px + (100vw/1200)*22);
+  color: #e6dbdb;
+  background-color: #181818;
+  text-align: center;
+}
+.rav {
+  height: 200%;
+}
+.box {
+  max-width: 400px;
+  margin-top: 60px;
+  animation-name: kalkulator;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+.vv {
+  width: 100%;
+  text-align: right;
+}
+
+
+.vod {
+  padding: 2px;
+  cursor: pointer;
+}
+.cb {
+  text-align: center;
+}
+.bottom {
+  display: inline-block;
+  position:relative;
+  height: calc(50px + (100vw/1200)*20);
+  
+  background-color: #5a5e5e;
+  line-height: calc(50px + (100vw/1200)*20);
+  margin: 20px;
+  padding: 0 20px;
+  border-radius: 1px;
+  cursor: pointer;
+  animation: klavishi 2s;
+  animation-delay: .5s;
+  
+}
+a {
+  text-decoration: none;
+  color: #e6dbdb;
+}
+.bottom::before {
+  content: '';
+  
+  
+  position:absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px; 
+  z-index: -1;
+  background-color: rgb(196, 113, 4);
+  border-radius: 5px;
+  filter: blur(10px);
+  opacity: 0;
+  transition: all .1s linear 0s;
+}
+
+.bottom:hover:before {
+  opacity: 1;
+
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@keyframes kalkulator {
+  0% {
+    transform:translateX(-100vw);
+  }
+  100% {
+    transform:translateX(0);
+  }
+}
+@keyframes klavishi {
+  0% {
+    transform:scale(0);
+    transform: rotate(0);
+    
+  }
+  100% {
+    transform:scale(1);
+    transform: rotate(360deg);
+    
+  }
+}
